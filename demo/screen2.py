@@ -17,7 +17,7 @@ def get_image(url, pic_name):
     driver = webdriver.Chrome(chromedriver, chrome_options=chrome_options)
     # 控制浏览器写入并转到链接
     driver.get(url)
-    driver.set_window_size(375, 812)
+    driver.set_window_size(375, 812) # 设置浏览器大小，iPhone X
     time.sleep(1)
     # 接下来是全屏的关键，用js获取页面的宽高，如果有其他需要用js的部分也可以用这个方法
     width = driver.execute_script("return document.documentElement.scrollWidth")
